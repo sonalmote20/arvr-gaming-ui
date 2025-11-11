@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0f1a;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 2px solid #1de9b6;
+}
+
+h1 {
+  color: #1de9b6;
+  text-shadow: 0 0 10px #1de9b6;
+  font-size: 2em;
+}
+
+.neon-btn {
+  background: transparent;
+  border: 2px solid #1de9b6;
+  color: #1de9b6;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-shadow: 0 0 5px #1de9b6;
+  transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+  background: #1de9b6;
+  color: #0b0f1a;
+  box-shadow: 0 0 20px #1de9b6;
+}
+
+.neon-btn.danger {
+  border-color: #ff1744;
+  color: #ff1744;
+  text-shadow: 0 0 5px #ff1744;
+}
+
+.neon-btn.danger:hover {
+  background: #ff1744;
+  color: #0b0f1a;
+  box-shadow: 0 0 20px #ff1744;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(11, 15, 26, 0.9);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: #121826;
+  border: 2px solid #1de9b6;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 30px #1de9b6;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Tabs */
+.tabs-section {
+  margin-top: 40px;
+}
+
+[role="tablist"] {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+[role="tabpanel"] {
+  font-size: 1.1em;
+  color: #b2ff59;
+}
+
+/* Carousel */
+.carousel-section {
+  margin-top: 50px;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  background: #121826;
+  border: 2px solid #1de9b6;
+  border-radius: 15px;
+  padding: 40px 0;
+  font-size: 1.2em;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #1de9b6;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+#prevGame { left: 10px; }
+#nextGame { right: 10px; }

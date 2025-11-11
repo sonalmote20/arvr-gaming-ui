@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARVR Gaming Portal</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>🎮 ARVR Gaming Portal</h1>
+    <button id="openGameModal" class="neon-btn">Start Game</button>
+  </header>
+
+  <!-- Modal Component -->
+  <div id="gameModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" tabindex="-1">
+      <h2>Welcome, Player One</h2>
+      <p>Prepare to enter the ARVR Universe. Choose your gear and confirm readiness!</p>
+      <div class="modal-actions">
+        <button id="confirmStart" class="neon-btn">Enter Game</button>
+        <button id="closeGameModal" class="neon-btn danger">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs Component -->
+  <section class="tabs-section">
+    <div id="gameTabs" role="tablist" aria-label="Game Mode Selection">
+      <button role="tab" aria-selected="true" class="neon-btn">AR Games</button>
+      <button role="tab" class="neon-btn">VR Games</button>
+      <button role="tab" class="neon-btn">Mixed Reality</button>
+    </div>
+
+    <div role="tabpanel">
+      <p>🌍 Experience real-world environments enhanced with digital overlays.</p>
+    </div>
+    <div role="tabpanel" hidden>
+      <p>🕶️ Enter full VR worlds and battle in hyper-realistic simulations.</p>
+    </div>
+    <div role="tabpanel" hidden>
+      <p>⚡ Mix real and virtual gameplay for next-gen hybrid adventures.</p>
+    </div>
+  </section>
+
+  <!-- Carousel Component -->
+  <section class="carousel-section">
+    <div id="gameCarousel" class="carousel" aria-label="Game Worlds">
+      <div class="slides">
+        <div class="slide">🪐 Space Explorer</div>
+        <div class="slide">🔥 Battle Arena</div>
+        <div class="slide">🕶️ Cyber City</div>
+      </div>
+      <button id="prevGame" class="nav-btn">⟨</button>
+      <button id="nextGame" class="nav-btn">⟩</button>
+    </div>
+  </section>
+
+  <script src="js/modal.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>
